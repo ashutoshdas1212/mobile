@@ -49,8 +49,7 @@ stackBuilder.addParentStack(MainActivity.class);
  
 stackBuilder.addNextIntent(notificationIntent);
  
-PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, 
-PendingIntent.FLAG_IMMUTABLE);
+PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE);
 NotificationCompat.Builder builder = new 
 NotificationCompat.Builder(context,CHANNEL_ID);
  

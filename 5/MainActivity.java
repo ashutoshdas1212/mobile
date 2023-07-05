@@ -88,20 +88,12 @@ startActivity(emailIntent);
 }
  
 protected void sendSMSMessage() {
- 
-Intent sendIntent = new Intent(Intent.ACTION_VIEW);
- 
-sendIntent.putExtra("sms_body", "default content");
- 
-sendIntent.setType("vnd.android-dir/mms-sms");
- 
-startActivity(sendIntent);
- 
-Toast.makeText(getApplicationContext(), "SMS sent.",
- 
-Toast.LENGTH_LONG).show();
- 
-} protected void PhoneDial() {
+        Uri str = Uri.parse("sms:");
+        Intent sendIntent = new Intent(Intent.ACTION_SENDTO, str);
+        sendIntent.putExtra("sms_body", "message txt");
+        startActivity(sendIntent);
+        Toast.makeText(getApplicationContext(), "SMS sent", Toast.LENGTH_LONG).show();
+    } protected void PhoneDial() {
  
 Intent intent = new Intent(Intent.ACTION_DIAL);
  

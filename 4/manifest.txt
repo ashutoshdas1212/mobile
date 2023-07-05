@@ -1,0 +1,2 @@
+AndroidManifest.xml (add the below line)
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
